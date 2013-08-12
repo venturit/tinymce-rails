@@ -46,8 +46,8 @@ module TinyMCE
       end
       
       it "adds TinyMCE assets to the manifest" do
-        manifest.should_receive(:append).with("tinymce/tiny_mce.js", assets.parent.join("tinymce/tiny_mce.js"))
-        manifest.should_receive(:append).with("tinymce/themes/advanced/editor_template.js", assets.parent.join("tinymce/themes/advanced/editor_template.js"))
+        manifest.should_receive(:append).with("tinymce/jquery.tinymce.min.js", assets.parent.join("tinymce/jquery.tinymce.min.js"))
+        manifest.should_receive(:append).with("tinymce/themes/modern/theme.min.js", assets.parent.join("tinymce/themes/modern/theme.min.js"))
         install
       end
       
